@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:14:33 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 15:30:18 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:38:25 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	main(int ac, char **av)
 		printf("%d\n", tmp->value);
 		tmp = tmp->next;
 	}
-	free(stack);
+	ft_lstclear(&stack);
 	return (0);
 }

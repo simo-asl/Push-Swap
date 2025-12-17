@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 10:50:58 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/10 10:51:04 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:46:09 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ long	ft_atol(const char *str)
 	}
 	while (*str)
 	{
+		if (res > (LONG_MAX - (*str - '0')) / 10)
+			error_exit();
 		res = res * 10 + (*str - '0');
 		str++;
 	}

@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:21:55 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 15:27:39 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 16:42:00 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_rotate(t_list **stack)
 	first = *stack;
 	last = ft_lstlast(*stack);
 	*stack = (*stack)->next;
-	*first->next = NULL;
+	first->next = NULL;
 	last->next = first;
 }
 
