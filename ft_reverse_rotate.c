@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:25:13 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 15:27:07 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 17:14:54 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,18 @@ void	ft_reverse_rotate(t_list **stack)
 void	rra(t_list **a)
 {
 	ft_reverse_rotate(a);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_list **b)
 {
 	ft_reverse_rotate(b);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_list **a, t_list **b)
 {
 	ft_reverse_rotate(a);
+	write(1, "rrr\n", 4);
 	ft_reverse_rotate(b);
 }

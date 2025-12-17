@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:09:20 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 16:40:21 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 17:11:40 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ void	ft_push(t_list **src, t_list **dest)
 void	pa(t_list **a, t_list **b)
 {
 	ft_push(b, a);
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_list **b, t_list **a)
 {
+	write(1, "pb\n", 3);
 	ft_push(a, b);
 }

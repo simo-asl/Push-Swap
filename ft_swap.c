@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 15:02:09 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 15:09:03 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 17:15:20 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ void	ft_swap(t_list **stack)
 void	sa(t_list **a)
 {
 	ft_swap(a);
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_list **b)
 {
 	ft_swap(b);
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_list **a, t_list **b)
