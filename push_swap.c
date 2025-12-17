@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 10:14:33 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/10 09:32:26 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/17 15:30:18 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 
 }
 */
-#include <stdio.h>
-
 int	main(int ac, char **av)
 {
 	t_list	*stack;
@@ -31,9 +29,7 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-
 	stack = ft_input_pars(ac, av);
-
 	//test
 	tmp = stack;
 	while (tmp)
@@ -44,4 +40,3 @@ int	main(int ac, char **av)
 	free(stack);
 	return (0);
 }
-
