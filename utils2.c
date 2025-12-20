@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 14:11:15 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/20 14:12:25 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:49:01 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,17 @@ void	rotate_to_top_b(t_list **b, int pos)
 		pos = size - pos;
 		while (pos-- > 0)
 			rrb(b);
+	}
+}
+
+void	push_back_to_a(t_list **a, t_list **b)
+{
+	int	pos;
+
+	while (*b)
+	{
+		pos = get_pos_max(*b);
+		rotate_to_top_b(b, pos);
+		pa(a, b);
 	}
 }

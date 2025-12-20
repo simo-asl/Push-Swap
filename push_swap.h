@@ -74,5 +74,9 @@ void	sort_five_or_four(t_list **a, t_list **b);
 void	sort_small(t_list **a, t_list **b);
 void	rotate_to_top_a(t_list **a, int pos);
 void	rotate_to_top_b(t_list **b, int pos);
+void	push_back_to_a(t_list **a, t_list **b);
+void	push_chunk(t_list **a, t_list **b, int current_max, int chunk_size);
+void	chunk_sort(t_list **a, t_list **b, int n);
+void	push_swap_sort(t_list **a);
 
 #endif
