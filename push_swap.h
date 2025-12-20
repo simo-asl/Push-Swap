@@ -32,6 +32,7 @@ void	error_exit(void);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *d, const char *s, size_t size);
 t_list	*ft_input_pars(int ac, char **av);
+int		is_sorted(t_list *a);
 
 //list functions
 t_list	*ft_lstnew(int value);
@@ -58,5 +59,20 @@ void	ft_reverse_rotate(t_list **stack);
 void	rra(t_list **a);
 void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
+
+//utils
+int		*stack_to_array(t_list *stack, int size);
+void	sort_ints(int *arr, int n);
+void	assign_indices(t_list *stack);
+int		get_pos_if(t_list *stack, int max_index);
+int		get_pos_max(t_list *stack);
+
+//sorting functions
+void	sort_three(t_list **a);
+void	push_small_to_b(t_list **a, t_list **b);
+void	sort_five_or_four(t_list **a, t_list **b);
+void	sort_small(t_list **a, t_list **b);
+void	rotate_to_top_a(t_list **a, int pos);
+void	rotate_to_top_b(t_list **b, int pos);
 
 #endif

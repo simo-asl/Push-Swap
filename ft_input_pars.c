@@ -52,3 +52,14 @@ t_list	*ft_input_pars(int ac, char **av)
 		error_exit();
 	return (stack);
 }
+
+int	is_sorted(t_list *a)
+{
+	while (a && a->next)
+	{
+		if (a->value > a->next->value)
+			return (0);
+		a = a->next;
+	}
+	return (1);
+}
