@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/09 10:14:33 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/17 18:05:48 by mel-asla         ###   ########.fr       */
+/*   Created: 2025/10/14 01:18:33 by mel-asla          #+#    #+#             */
+/*   Updated: 2025/10/18 16:17:00 by mel-asla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#include "checker.h"
 
-int	main(int ac, char **av)
+size_t	ft_strlcpy(char *d, const char *s, size_t size)
 {
-	t_list	*stack;
-	t_list	*tmp;
+	size_t	i;
 
-	if (ac < 2)
-		return (0);
-	stack = ft_input_pars(ac, av);
-	tmp = stack;
-	while (tmp)
+	i = 0;
+	if (size > 0)
 	{
-		printf("%d\n", tmp->value);
-		tmp = tmp->next;
+		while (i < size - 1 && s[i])
+		{
+			d[i] = s[i];
+			i++;
+		}
+		d[i] = '\0';
 	}
-	ft_lstclear(&stack);
-	return (0);
+	while (s[i])
+		i++;
+	return (i);
 }
