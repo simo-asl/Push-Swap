@@ -21,8 +21,17 @@ typedef struct s_list
 {
 	int				value;
 	int				index;
+	int				flag;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_push
+{
+	int	next;
+	int	max;
+	int	mid;
+	int	flag;
+}	t_push;
 
 //parsing functions
 long	ft_atol(const char *str);
@@ -78,5 +87,15 @@ void	push_back_to_a(t_list **a, t_list **b);
 void	push_chunk(t_list **a, t_list **b, int current_max, int chunk_size);
 void	chunk_sort(t_list **a, t_list **b, int n);
 void	push_swap_sort(t_list **a);
+
+//quicksort functions
+void	begin_sorting(t_list **stack1, t_list **stack2, t_push *push, int count);
+void	find_next(t_list **stack1, t_list **stack2, t_push *push);
+void	quick_a(t_list **stack1, t_list **stack2, t_push *push);
+void	quick_b(t_list **stack1, t_list **stack2, t_push *push);
+void	quick_sort(t_list **stack1, t_list **stack2, int count);
+t_list	*find_min_lst(t_list **stack);
+t_list	*find_max_lst(t_list **stack);
+int		check_sorting_a(t_list **stack1, int count);
 
 #endif
