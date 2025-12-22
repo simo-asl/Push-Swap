@@ -80,9 +80,6 @@ void	sort_five_or_four(t_list **a, t_list **b)
 void	sort_small(t_list **a, t_list **b)
 {
 	int		size;
-	int		pos;
-	int		min;
-	t_list	*tmp;
 
 	size = ft_lstsize(*a);
 	if (size == 2)
