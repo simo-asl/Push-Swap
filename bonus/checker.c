@@ -101,10 +101,7 @@ int	main(int ac, char **av)
 	char	*line;
 
 	if (ac < 2)
-	{
-		write(1, "OK\n", 3);
 		return (0);
-	}
 	a = ft_input_pars(ac, av);
 	b = NULL;
 	line = get_next_line(0);
