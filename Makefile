@@ -6,7 +6,7 @@
 #    By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 12:00:00 by mel-asla          #+#    #+#              #
-#    Updated: 2025/12/22 12:00:00 by mel-asla         ###   ########.fr        #
+#    Updated: 2025/12/23 03:07:16 by mel-asla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ BONUS_NAME = checker
 
 SRCS = src/main.c \
 	   src/push_swap_sort.c \
+	   src/quick_sort.c \
 	   src/sorting.c \
 	   src/utils.c \
 	   src/utils2.c \
