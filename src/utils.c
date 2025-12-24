@@ -19,7 +19,7 @@ int	*stack_to_array(t_list *stack, int size)
 
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
-		error_exit();
+		error_exit(&stack, NULL, NULL);
 	i = 0;
 	while (stack && i < size)
 	{

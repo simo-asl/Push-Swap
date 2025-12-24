@@ -20,7 +20,7 @@ void	quick_sort(t_list **stack1, t_list **stack2, int count)
 	push.max = find_max_lst(stack1)->index;
 	push.mid = push.max / 2 + push.next;
 	push.flag = 0;
-	begin_sorting(stack1, stack2, &push, count);
+	start_sort(stack1, stack2, &push, count);
 	while (!(check_sorting_a(stack1, count)))
 	{
 		if (ft_lstsize(*stack2) == 0)
@@ -30,7 +30,7 @@ void	quick_sort(t_list **stack1, t_list **stack2, int count)
 	}
 }
 
-void	begin_sorting(t_list **stack1, t_list **stack2, t_push *push, int count)
+void	start_sort(t_list **stack1, t_list **stack2, t_push *push, int count)
 {
 	int	i;
 

@@ -28,7 +28,7 @@ long	ft_atol(const char *str)
 	while (*str)
 	{
 		if (res > (LONG_MAX - (*str - '0')) / 10)
-			error_exit();
+			return (1337 + 2147483690);
 		res = res * 10 + (*str - '0');
 		str++;
 	}

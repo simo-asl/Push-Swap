@@ -37,7 +37,7 @@ typedef struct s_push
 long	ft_atol(const char *str);
 int		ft_dup_check_stack(t_list *stack);
 int		ft_isnumber(char *s);
-void	error_exit(void);
+void	error_exit(t_list **a, t_list **b, char **split);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *d, const char *s, size_t size);
 t_list	*ft_input_pars(int ac, char **av);

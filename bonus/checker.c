@@ -85,7 +85,7 @@ static void	do_instruction(char *line, t_list **a, t_list **b)
 	if (!line)
 		return ;
 	if (!valid_instra(line))
-		error_exit();
+		error_exit(a, b, NULL);
 	sum = line[0];
 	sum += line[1];
 	sum += line[2];

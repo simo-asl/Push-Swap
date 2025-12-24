@@ -19,16 +19,16 @@ void	ft_parstr(t_list **stack, char *str)
 	int		j;
 
 	split = ft_split(str, ' ');
-	if (!split)
-		error_exit();
 	j = 0;
+	if (!split || *split == NULL)
+		error_exit(stack, NULL, split);
 	while (split[j])
 	{
 		if (!ft_isnumber(split[j]))
-			error_exit();
+			error_exit(stack, NULL, split);
 		nb = ft_atol(split[j]);
 		if (nb < INT_MIN || nb > INT_MAX)
-			error_exit();
+			error_exit(stack, NULL, split);
 		ft_lstadd_back(stack, ft_lstnew((int)nb));
 		free(split[j]);
 		j++;
@@ -49,7 +49,7 @@ t_list	*ft_input_pars(int ac, char **av)
 		i++;
 	}
 	if (ft_dup_check_stack(stack))
-		error_exit();
+		error_exit(&stack, NULL, NULL);
 	return (stack);
 }
 
