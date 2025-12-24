@@ -61,6 +61,6 @@ void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
 
 //get_next_line
-char	*get_next_line(int fd);
+char *get_next_line(int fd, char **buffer);
 
 #endif

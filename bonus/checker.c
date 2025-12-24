@@ -85,7 +85,10 @@ static void	do_instruction(char *line, t_list **a, t_list **b)
 	if (!line)
 		return ;
 	if (!valid_instra(line))
+	{
+		free(line);
 		error_exit(a, b, NULL);
+	}
 	sum = line[0];
 	sum += line[1];
 	sum += line[2];
@@ -99,18 +102,21 @@ int	main(int ac, char **av)
 	t_list	*a;
 	t_list	*b;
 	char	*line;
+	char	*buffer;
 
 	if (ac < 2)
 		return (0);
+	buffer = NULL;
 	a = ft_input_pars(ac, av);
 	b = NULL;
-	line = get_next_line(0);
+	line = get_next_line(0, &buffer);
 	while (line)
 	{
 		do_instruction(line, &a, &b);
 		free(line);
-		line = get_next_line(0);
+		line = get_next_line(0, &buffer);
 	}
+	free(buffer);
 	if (is_sorted(a) && ft_lstsize(b) == 0)
 		write(1, "OK\n", 3);
 	else
