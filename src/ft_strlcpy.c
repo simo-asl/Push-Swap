@@ -30,3 +30,18 @@ size_t	ft_strlcpy(char *d, const char *s, size_t size)
 		i++;
 	return (i);
 }
+
+void	ft_free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	if (!split)
+		return ;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
