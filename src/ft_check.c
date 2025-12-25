@@ -12,23 +12,12 @@
 
 #include "../push_swap.h"
 
-void	error_exit(t_list **a,t_list **b, char **split)
+void	error_exit(t_list **a, t_list **b, char **split)
 {
-	int	i;
-
-	i = 0;
-	write(2, "Error\n", 6);
 	ft_lstclear(a);
 	ft_lstclear(b);
-	if (split)
-	{
-		while (split[i])
-		{
-			free(split[i]);
-			i++;
-		}
-		free(split);
-	}
+	ft_free_split(split);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 

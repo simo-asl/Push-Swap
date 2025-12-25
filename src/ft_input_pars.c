@@ -30,10 +30,9 @@ void	ft_parstr(t_list **stack, char *str)
 		if (nb < INT_MIN || nb > INT_MAX)
 			error_exit(stack, NULL, split);
 		ft_lstadd_back(stack, ft_lstnew((int)nb));
-		free(split[j]);
 		j++;
 	}
-	free(split);
+	ft_free_split(split);
 }
 
 t_list	*ft_input_pars(int ac, char **av)

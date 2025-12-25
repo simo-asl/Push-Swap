@@ -28,11 +28,12 @@ typedef struct s_list
 long	ft_atol(const char *str);
 int		ft_dup_check_stack(t_list *stack);
 int		ft_isnumber(char *s);
-void	error_exit(t_list **a,t_list **b, char **split);
+void	error_exit(t_list **a, t_list **b, char **split);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *d, const char *s, size_t size);
 t_list	*ft_input_pars(int ac, char **av);
 int		is_sorted(t_list *a);
+void	ft_free_split(char **split);
 
 //list functions
 t_list	*ft_lstnew(int value);
@@ -61,6 +62,6 @@ void	rrb(t_list **b);
 void	rrr(t_list **a, t_list **b);
 
 //get_next_line
-char *get_next_line(int fd, char **buffer);
+char	*get_next_line(int fd, char **buffer);
 
 #endif

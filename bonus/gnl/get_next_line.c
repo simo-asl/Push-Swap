@@ -85,19 +85,16 @@ static char	*ft_buffering(char *buffer)
 	return (new_buffer);
 }
 
-char *get_next_line(int fd, char **buffer)
+char	*get_next_line(int fd, char **buffer)
 {
-    char *line;
+	char	*line;
 
-    if (!*buffer)
-        *buffer = ft_strdup(""); // initialize buffer
-
-    *buffer = ft_read(fd, *buffer);
-    if (!*buffer)
-        return (NULL);
-
-    line = ft_line(*buffer);
-    *buffer = ft_buffering(*buffer);
-
-    return (line);
+	if (!*buffer)
+		*buffer = ft_strdup("");
+	*buffer = ft_read(fd, *buffer);
+	if (!*buffer)
+		return (NULL);
+	line = ft_line(*buffer);
+	*buffer = ft_buffering(*buffer);
+	return (line);
 }

@@ -42,6 +42,7 @@ char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *d, const char *s, size_t size);
 t_list	*ft_input_pars(int ac, char **av);
 int		is_sorted(t_list *a);
+void	ft_free_split(char **split);
 
 //list functions
 t_list	*ft_lstnew(int value);

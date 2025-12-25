@@ -59,3 +59,18 @@ void	push_back_to_a(t_list **a, t_list **b)
 		pa(a, b);
 	}
 }
+
+void	ft_free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	if (!split)
+		return ;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
