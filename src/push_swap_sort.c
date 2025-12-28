@@ -6,7 +6,7 @@
 /*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 15:33:15 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/12/20 18:02:16 by mel-asla         ###   ########.fr       */
+/*   Updated: 2025/12/28 11:24:59 by sidna_7          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	quick_a(t_list **stack1, t_list **stack2, t_push *push)
 	int	count_b;
 	int	i;
 
-	i = 1;
+	i = 0;
 	count_b = ft_lstsize(*stack2);
 	while (ft_lstsize(*stack2) && i < count_b)
 	{
