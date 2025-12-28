@@ -34,8 +34,8 @@ void	start_sort(t_list **stack1, t_list **stack2, t_push *push, int count)
 {
 	int	i;
 
-	i = -1;
-	while (++i < count)
+	i = 0;
+	while (i < count)
 	{
 		if ((*stack1)->index <= push->mid)
 			pb(stack2, stack1);
@@ -46,6 +46,7 @@ void	start_sort(t_list **stack1, t_list **stack2, t_push *push, int count)
 			else
 				ra(stack1);
 		}
+		i++;
 	}
 	push->max = push->mid;
 	push->mid = (push->max - push->next) / 2 + push->next;
@@ -80,9 +81,9 @@ void	quick_a(t_list **stack1, t_list **stack2, t_push *push)
 	int	count_b;
 	int	i;
 
-	i = -1;
+	i = 1;
 	count_b = ft_lstsize(*stack2);
-	while (ft_lstsize(*stack2) && ++i < count_b)
+	while (ft_lstsize(*stack2) && i < count_b)
 	{
 		if ((*stack2)->index == push->next)
 			find_next(stack1, stack2, push);
@@ -93,6 +94,7 @@ void	quick_a(t_list **stack1, t_list **stack2, t_push *push)
 		}
 		else if ((*stack2)->index < push->mid)
 			rb(stack2);
+		i++;
 	}
 	push->max = push->mid;
 	push->mid = (push->max - push->next) / 2 + push->next;
