@@ -29,33 +29,3 @@ void	rotate_to_top_a(t_list **a, int pos)
 			rra(a);
 	}
 }
-
-void	rotate_to_top_b(t_list **b, int pos)
-{
-	int	size;
-
-	size = ft_lstsize(*b);
-	if (pos <= size / 2)
-	{
-		while (pos-- > 0)
-			rb(b);
-	}
-	else
-	{
-		pos = size - pos;
-		while (pos-- > 0)
-			rrb(b);
-	}
-}
-
-void	push_back_to_a(t_list **a, t_list **b)
-{
-	int	pos;
-
-	while (*b)
-	{
-		pos = get_pos_max(*b);
-		rotate_to_top_b(b, pos);
-		pa(a, b);
-	}
-}
