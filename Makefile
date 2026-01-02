@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mel-asla <mel-asla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 12:00:00 by mel-asla          #+#    #+#              #
-#    Updated: 2025/12/28 18:36:14 by mel-asla         ###   ########.fr        #
+#    Updated: 2026/01/02 01:54:55 by mel-asla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,8 +61,11 @@ OBJS = $(SRCS:.c=.o)
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
+DEPS = $(OBJS:.o=.d) $(BONUS_OBJS:.o=.d)
+
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+
+CFLAGS = -Wall -Wextra -Werror -MMD
 
 all: $(NAME)
 
@@ -77,8 +80,9 @@ $(BONUS_NAME): $(BONUS_OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+-include $(DEPS)
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) $(DEPS)
 
 fclean: clean
 	rm -f $(NAME) $(BONUS_NAME)
