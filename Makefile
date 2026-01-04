@@ -6,7 +6,7 @@
 #    By: symo <symo@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 12:00:00 by mel-asla          #+#    #+#              #
-#    Updated: 2026/01/04 06:39:34 by symo             ###   ########.fr        #
+#    Updated: 2026/01/04 06:56:34 by symo             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,22 +40,22 @@ SRCS = src/main.c \
 BONUS_SRCS = bonus/checker.c \
              bonus/gnl/get_next_line.c \
              bonus/gnl/get_next_line_utils.c \
-             bonus/src/ft_atol.c \
-             bonus/src/ft_check.c \
-             bonus/src/ft_input_pars.c \
-             bonus/src/ft_split.c \
-             bonus/src/ft_strlcpy.c \
-             bonus/src/ft_lstnew.c \
-             bonus/src/ft_lstadd_front.c \
-             bonus/src/ft_lstadd_back.c \
-             bonus/src/ft_lstlast.c \
-             bonus/src/ft_lstsize.c \
-             bonus/src/ft_lstdelone.c \
-             bonus/src/ft_lstclear.c \
-             bonus/src/ft_push.c \
-             bonus/src/ft_swap.c \
-             bonus/src/ft_rotate.c \
-             bonus/src/ft_reverse_rotate.c
+             bonus/bonus_src/ft_atol.c \
+             bonus/bonus_src/ft_check.c \
+             bonus/bonus_src/ft_input_pars.c \
+             bonus/bonus_src/ft_split.c \
+             bonus/bonus_src/ft_strlcpy.c \
+             bonus/bonus_src/ft_lstnew.c \
+             bonus/bonus_src/ft_lstadd_front.c \
+             bonus/bonus_src/ft_lstadd_back.c \
+             bonus/bonus_src/ft_lstlast.c \
+             bonus/bonus_src/ft_lstsize.c \
+             bonus/bonus_src/ft_lstdelone.c \
+             bonus/bonus_src/ft_lstclear.c \
+             bonus/bonus_src/ft_push.c \
+             bonus/bonus_src/ft_swap.c \
+             bonus/bonus_src/ft_rotate.c \
+             bonus/bonus_src/ft_reverse_rotate.c
 
 OBJS = $(SRCS:.c=.o)
 
