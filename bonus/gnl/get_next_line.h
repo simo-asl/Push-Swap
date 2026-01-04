@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mel-asla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: symo <symo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:12:28 by mel-asla          #+#    #+#             */
-/*   Updated: 2025/11/05 10:59:19 by mel-asla         ###   ########.fr       */
+/*   Updated: 2026/01/04 06:46:02 by symo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
+# include "../checker.h"
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
